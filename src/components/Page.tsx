@@ -24,10 +24,10 @@ const photoStyle: CSSProperties = {
 
 const photoMobileStyle: CSSProperties = {
   position: "absolute",
-  width: "100px",
+  width: "90px",
   borderRadius: "90px",
   top: "30%",
-  right: 10,
+  right: 20,
 };
 
 export const Page = ({
