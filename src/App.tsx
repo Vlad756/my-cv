@@ -5,7 +5,9 @@ import {
   ABOUT_ME,
   APPLICATION_SECURITY,
   BACKEND,
+  EDUCATION,
   ENDING,
+  EXPERIENCE,
   FRONTEND,
 } from "./constants";
 import { Tooltip } from "react-tooltip";
@@ -41,7 +43,7 @@ export default function App() {
   };
 
   const handleNext = () => {
-    if (currentPage < 4) scroll(currentPage + 1);
+    if (currentPage < 3) scroll(currentPage + 1);
   };
 
   const handleBack = () => {
@@ -55,7 +57,7 @@ export default function App() {
         // e.preventDefault();
         if (!parallax.current) return;
         if (parallax.current.busy) return;
-        if (e.deltaY > 0 && currentPage < 4) scroll(currentPage + 1);
+        if (e.deltaY > 0 && currentPage < 3) scroll(currentPage + 1);
         else if (e.deltaY < 0 && currentPage > 0) scroll(currentPage - 1);
         else if (e.deltaY > 0) scroll(4);
         else if (e.deltaY < 0) scroll(0);
@@ -83,7 +85,7 @@ export default function App() {
       <Parallax
         className={`${styles.container} + ${styles.test}`}
         ref={parallax}
-        pages={5}
+        pages={4}
         horizontal
       >
         <Page
@@ -93,7 +95,7 @@ export default function App() {
           header={ABOUT_ME.title}
           text={ABOUT_ME.text}
         />
-        <Page
+        {/* <Page
           offset={1}
           gradient="teal"
           onClick={() => scroll(2)}
@@ -106,16 +108,30 @@ export default function App() {
           onClick={() => scroll(3)}
           header={FRONTEND.title}
           text={FRONTEND.text}
+        /> */}
+        <Page
+          offset={1}
+          gradient="teal"
+          onClick={() => scroll(2)}
+          header={EDUCATION.title}
+          text={EDUCATION.text}
         />
         <Page
+          offset={2}
+          gradient="tomato"
+          onClick={() => scroll(3)}
+          header={EXPERIENCE.title}
+          text={EXPERIENCE.text}
+        />
+        {/* <Page
           offset={3}
           gradient="sec"
           onClick={() => scroll(4)}
           header={APPLICATION_SECURITY.title}
           text={APPLICATION_SECURITY.text}
-        />
+        /> */}
         <Page
-          offset={4}
+          offset={3}
           gradient="teal"
           onClick={() => scroll(0)}
           header={ENDING.title}
@@ -130,29 +146,29 @@ export default function App() {
           selected={currentPage === 0}
         />
         <Button
-          tooltip="<h3>Backend Development</h3>"
+          tooltip="<h3>Education</h3>"
           text="2"
           onClick={() => scroll(1)}
           selected={currentPage === 1}
         />
         <Button
-          tooltip="<h3>Frontend Development</h3>"
+          tooltip="<h3>Experience</h3>"
           text="3"
           onClick={() => scroll(2)}
           selected={currentPage === 2}
         />
         <Button
-          tooltip="<h3>Application Security</h3>"
+          tooltip="<h3>Thank You</h3>"
           text="4"
           onClick={() => scroll(3)}
           selected={currentPage === 3}
         />
-        <Button
+        {/* <Button
           tooltip="<h3>:)</h3>"
           text="5"
           onClick={() => scroll(4)}
           selected={currentPage === 4}
-        />
+        /> */}
       </div>
       <Contacts />
       <Tooltip id="tooltip-data-html" />

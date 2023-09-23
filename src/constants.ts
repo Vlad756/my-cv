@@ -1,12 +1,33 @@
+// export const ABOUT_ME = {
+//   title: "About me",
+//   text:
+//     "I'm a software engineer based in Saint Petersburg with over 3 " +
+//     "years of production experience in the software industry. My focus area for " +
+//     "the past few years has been back-end development with .NET, but " +
+//     "I'm also skilled in front-end development with React and application security." +
+//     "\n\nI have a Bachelor's degree in Engineering and am currently working on a Master's degree in Computer Science." +
+//     "\n\nI worked at EPAM Systems and startup IT Revko as a .NET software engineer, doing some React tasks. At EPAM I also worked as an Application Security Specialist. On the following pages you can find more information about my experience.",
+// };
+
 export const ABOUT_ME = {
   title: "About me",
   text:
     "I'm a software engineer based in Saint Petersburg with over 3 " +
-    "years of production experience in the software industry. My focus area for " +
+    "years of experience in the software industry. My focus area for " +
     "the past few years has been back-end development with .NET, but " +
-    "I'm also skilled in front-end development with React and application security." +
-    "\n\nI have a Bachelor's degree in Engineering and am currently working on a Master's degree in Computer Science." +
-    "\n\nI worked at EPAM Systems and startup IT Revko as a .NET software engineer, doing some React tasks. At EPAM I also worked as an Application Security Specialist. On the following pages you can find more information about my experience.",
+    "I'm also skilled in front-end development with React and Application Security.",
+};
+
+export const EDUCATION = {
+  title: "Education",
+  text: "I have a Bachelor's degree in Engineering and currently working on a Master's degree in Computer Science.",
+};
+
+export const EXPERIENCE = {
+  title: "Experience",
+  text:
+    ".NET Software Engineer & Security Champion\nEPAM Systems – (June 2021 - June 2022)" +
+    "\n\n.NET Software Engineer\nIT Revko – (June 2022 - Present)",
 };
 
 export const BACKEND = {
@@ -32,9 +53,16 @@ export const APPLICATION_SECURITY = {
     "\n\nSkills: Security Risk Assessment, Threat Modeling, Security Impact Analysis, Root Cause Analysis, SSDLC, STRIDE, OWASP Top 10, OWASP SAMM, DFD's, Microsoft Threat Modeling Tool",
 };
 
+// export const ENDING = {
+//   title: "Thank you for attention",
+//   text:
+//     'I also familiar with Python and sometimes I use it for some "home scripts". Check out my pet project (TBD...working on it).' +
+//     "\n\nAt the bottom right you can find my contact information.",
+// };
+
 export const ENDING = {
   title: "Thank you for attention",
   text:
-    'I also familiar with Python and sometimes I use it for some "home scripts". Check out my pet project (TBD...working on it).' +
-    "\n\nAt the bottom right you can find my contact information.",
+    // "Check out my pet project (TBD...working on it)." +
+    "At the bottom right you can find my contact information.",
 };

@@ -128,7 +128,7 @@ export const Clouds = () => {
         />
       </ParallaxLayer>
 
-      <ParallaxLayer offset={3.2} speed={-0.2} style={{ opacity: 0.4 }}>
+      {/* <ParallaxLayer offset={3.2} speed={-0.2} style={{ opacity: 0.4 }}>
         <img
           src={cloud}
           style={{ display: "block", width: "15%", marginLeft: "60%" }}
@@ -139,7 +139,7 @@ export const Clouds = () => {
           style={{ display: "block", width: "15%", marginLeft: "20%" }}
           alt=""
         />
-      </ParallaxLayer>
+      </ParallaxLayer> */}
     </div>
   );
 };
