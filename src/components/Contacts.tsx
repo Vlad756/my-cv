@@ -7,8 +7,8 @@ import useWindowDimensions from "../hooks/useWindowDimensions";
 
 const contactsStyle: CSSProperties = {
   position: "absolute",
-  bottom: "50px",
-  right: "20px",
+  bottom: 30,
+  right: 10,
   color: "white",
   display: "flex",
   width: "130px",
@@ -17,8 +17,8 @@ const contactsStyle: CSSProperties = {
 };
 const mobileContactsStyle: CSSProperties = {
   position: "absolute",
-  bottom: "50px",
-  right: "5px",
+  bottom: 10,
+  right: 10,
   color: "white",
   display: "flex",
   width: "130px",

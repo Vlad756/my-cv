@@ -16,7 +16,6 @@ interface PageProps {
 }
 
 const photoStyle: CSSProperties = {
-  position: "absolute",
   width: "100px",
   borderRadius: "90px",
   marginLeft: "50px",
@@ -50,8 +49,8 @@ export const Page = ({
       </ParallaxLayer>
 
       <ParallaxLayer offset={offset} speed={0.3} onClick={onClick}>
-        <div className={width < 1000 ? styles.textboxMobile : styles.textbox}>
-          <p className={width < 1000 ? styles.headerMobile : styles.header}>
+        <div className={width < 1200 ? styles.textboxMobile : styles.textbox}>
+          <div className={width < 1200 ? styles.headerMobile : styles.header}>
             {header}
             {offset === 0 && (
               <img
@@ -60,8 +59,8 @@ export const Page = ({
                 alt=""
               />
             )}
-          </p>
-          <p className={width < 1000 ? styles.textMobile : styles.text}>
+          </div>
+          <p className={width < 1200 ? styles.textMobile : styles.text}>
             {text}
           </p>
         </div>

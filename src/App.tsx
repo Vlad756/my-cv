@@ -1,16 +1,37 @@
-import { useRef, useState } from "react";
+import { CSSProperties, useRef, useState } from "react";
 import { Parallax, IParallax } from "@react-spring/parallax";
 import styles from "./styles.module.css";
-import { ABOUT_ME, APPLICATION_SECURITY, BACKEND, FRONTEND } from "./constants";
+import {
+  ABOUT_ME,
+  APPLICATION_SECURITY,
+  BACKEND,
+  ENDING,
+  FRONTEND,
+} from "./constants";
 import { Tooltip } from "react-tooltip";
 import { Page } from "./components/Page";
 import { Button } from "./components/Button";
 import { Contacts } from "./components/Contacts";
+import useWindowDimensions from "./hooks/useWindowDimensions";
+
+const menuStyle: CSSProperties = {
+  position: "absolute",
+  left: "1%",
+  bottom: 20,
+  zIndex: 1100,
+};
+
+const mobileMenuStyle: CSSProperties = {
+  position: "absolute",
+  left: 10,
+  bottom: 10,
+  zIndex: 1100,
+};
 
 export default function App() {
   const parallax = useRef<IParallax>(null);
   const [currentPage, setCurrentPage] = useState(0);
-  const [isAnimation, setIsAnimation] = useState(false);
+  const { height, width } = useWindowDimensions();
 
   const scroll = (to: number) => {
     if (parallax.current) {
@@ -21,12 +42,10 @@ export default function App() {
 
   const handleNext = () => {
     if (currentPage < 4) scroll(currentPage + 1);
-    // else scroll(0);
   };
 
   const handleBack = () => {
     if (currentPage > 0) scroll(currentPage - 1);
-    // else scroll(4);
   };
 
   return (
@@ -99,11 +118,11 @@ export default function App() {
           offset={4}
           gradient="teal"
           onClick={() => scroll(0)}
-          header={"Have a nice day!"}
-          text={"At the bottom right you can find my contact information."}
+          header={ENDING.title}
+          text={ENDING.text}
         />
       </Parallax>
-      <div style={{ position: "absolute", left: "3%", bottom: 50, zIndex: 1100, }}>
+      <div style={width < 1000 ? mobileMenuStyle : menuStyle}>
         <Button
           tooltip="<h3>About Me</h3>"
           text="1"

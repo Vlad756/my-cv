@@ -10,26 +10,26 @@
 
   .navbutton {
     border-radius: 30px;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background-color: rgb(123, 127, 127);
     border: 0;
     margin: 10px;
     color: aliceblue;
-    font-size: 25px;
+    font-size: 20px;
     opacity: 0.5;
     transition: all .2s ease-in-out;
   }
 
   .navbuttonMobile {
     border-radius: 30px;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-color: rgb(123, 127, 127);
     border: 0;
     margin-left: 5px;
     color: aliceblue;
-    font-size: 20px;
+    font-size: 15px;
     opacity: 0.5;
     transition: all .2s ease-in-out;
   }
@@ -44,7 +44,7 @@
 
   .textbox {
     width: 100%;
-    padding: 50px;
+    padding: 30px;
   }
 
   .photo {
@@ -103,8 +103,10 @@
   
   .header {
     text-transform: uppercase;
-    font-size: 75px;
+    font-size: 50px;
     color: #545864;
+    display: flex;
+    align-items: center;
   }
   
   .number span {
