@@ -32,7 +32,7 @@ export default function App() {
       }}
     >
       <Parallax
-        className={styles.container}
+        className={`${styles.container} + ${styles.test}`}
         ref={parallax}
         pages={5}
         horizontal
