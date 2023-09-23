@@ -14,7 +14,7 @@ export const BACKEND = {
   text:
     "I've worked with C# / .NET for over 3 years but started learning it earlier in university. Worked as a .NET Software Engineer at EPAM Systems and startup IT Revko." +
     "\n\nI have experience in microservices architecture implementation and developing projects from scratch." +
-    "\n\nAlso I have experience with DDD and developing architecture using the C4 model. Used Event Storming in my projects." +
+    "\n\nAlso I have experience with DDD and developing architecture using the C4 model." +
     "\n\nSkills: C#, .NET, EF, RabbitMQ, Redis, PostgreSQL, MongoDB, Elasticsearch, Kibana, gRPC, SignalR, AutoMapper, FluentValidation, MediatR, Ocelot, OOP, SOLID, DDD, GoF, Docker, Azure",
 };
 
