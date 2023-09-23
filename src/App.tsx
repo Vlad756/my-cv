@@ -10,6 +10,7 @@ import { Contacts } from "./components/Contacts";
 export default function App() {
   const parallax = useRef<IParallax>(null);
   const [currentPage, setCurrentPage] = useState(0);
+  const [isAnimation, setIsAnimation] = useState(false);
 
   const scroll = (to: number) => {
     if (parallax.current) {
@@ -18,19 +19,48 @@ export default function App() {
     }
   };
 
+  const handleNext = () => {
+    if (currentPage < 4) scroll(currentPage + 1);
+    // else scroll(0);
+  };
+
+  const handleBack = () => {
+    if (currentPage > 0) scroll(currentPage - 1);
+    // else scroll(4);
+  };
+
   return (
     <div
-      style={{ background: "#dfdfdf" }}
+      style={{ background: "#dfdfdf", zIndex: 900 }}
       onWheel={(e) => {
-        e.preventDefault();
+        // e.preventDefault();
         if (!parallax.current) return;
         if (parallax.current.busy) return;
-        if (e.deltaY > 0 && currentPage < 4) scroll(currentPage + 0.1);
-        else if (e.deltaY < 0 && currentPage > 0) scroll(currentPage - 0.1);
+        if (e.deltaY > 0 && currentPage < 4) scroll(currentPage + 1);
+        else if (e.deltaY < 0 && currentPage > 0) scroll(currentPage - 1);
         else if (e.deltaY > 0) scroll(4);
         else if (e.deltaY < 0) scroll(0);
       }}
     >
+      <div
+        style={{
+          width: "50%",
+          height: "100%",
+          zIndex: 1000,
+          position: "absolute",
+        }}
+        onClick={handleBack}
+      ></div>
+      <div
+        style={{
+          width: "50%",
+          height: "100%",
+          zIndex: 1000,
+          position: "absolute",
+          left: "50%",
+        }}
+        onClick={handleNext}
+      ></div>
       <Parallax
         className={`${styles.container} + ${styles.test}`}
         ref={parallax}
@@ -73,7 +103,7 @@ export default function App() {
           text={"At the bottom right you can find my contact information."}
         />
       </Parallax>
-      <div style={{ position: "absolute", left: "3%", bottom: 50 }}>
+      <div style={{ position: "absolute", left: "3%", bottom: 50, zIndex: 1100, }}>
         <Button
           tooltip="<h3>About Me</h3>"
           text="1"

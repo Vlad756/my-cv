@@ -13,6 +13,7 @@ const contactsStyle: CSSProperties = {
   display: "flex",
   width: "130px",
   justifyContent: "space-between",
+  zIndex: 1100,
 };
 const mobileContactsStyle: CSSProperties = {
   position: "absolute",
@@ -22,6 +23,7 @@ const mobileContactsStyle: CSSProperties = {
   display: "flex",
   width: "130px",
   justifyContent: "space-between",
+  zIndex: 1100,
 };
 
 export const Contacts = () => {
