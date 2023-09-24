@@ -1,13 +1,20 @@
 html, body, #root {
   height: 100%;
   width: 100%;
+  -ms-overflow-style: none;
 }
 
 body {
   font-family: system-ui;
   margin: 0;
+  -ms-overflow-style: none;
 }
 
 *, *:after, *:before {
   box-sizing: border-box;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
